@@ -10,5 +10,9 @@ angular.module('myApp', [
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/view2/:coffeeId', {
+  	templateUrl: 'view2/view2.html',
+  	controller: 'View2Ctrl'
+  }).otherwise({redirectTo: '/view1'});
 }]);
+

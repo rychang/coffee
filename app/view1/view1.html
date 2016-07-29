@@ -1,1 +1,10 @@
-<p>This is the partial for view 1.</p>
+ Search: <input ng-model="query">
+
+ <ul class="coffees">
+    <li ng-repeat="coffee in coffees | filter:query">
+      <span>Coffee: {{coffee.name}}</span>
+      <p>Brand: {{coffee.brand}}</p>
+      <p>Country: {{coffee.country}}</p>
+      <a href = "#!/view2/{{coffee.id}}">Reviews </a>
+    </li>
+  </ul>
